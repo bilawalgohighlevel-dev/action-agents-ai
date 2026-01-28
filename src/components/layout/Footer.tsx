@@ -7,11 +7,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: "Voice Agent", path: "/services/voice-agent" },
-    { name: "Web Concierge", path: "/services/web-concierge" },
-    { name: "Conversation Hub", path: "/services/conversation-hub" },
-    { name: "Instant Response", path: "/services/instant-response" },
-    { name: "Reputation Guard", path: "/services/reputation-guard" },
+    { name: "Phone Call Agent", path: "/services/voice-agent" },
+    { name: "Voice Webchat Agent", path: "/services/web-concierge" },
+    { name: "Conversation Agent", path: "/services/conversation-hub" },
+    { name: "Missed Call Text Back Agent", path: "/services/instant-response" },
+    { name: "Reputation Management Agent", path: "/services/reputation-guard" },
   ];
 
   const company = [
@@ -27,7 +27,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="The Agentic Force" className="h-12 w-12 object-contain" />
+              <img src={logo} alt="The Agentic Force" className="h-12 w-12 object-contain rounded-full" />
               <div>
                 <h3 className="font-heading font-bold text-lg">
                   The Agentic <span className="gradient-text">Force</span>
@@ -99,7 +99,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary mt-0.5" />
                 <span className="text-muted-foreground text-sm">
-                  Shahdara, Lahore, Punjab, Pakistan
+                  Lahore, Punjab, Pakistan
                 </span>
               </li>
             </ul>

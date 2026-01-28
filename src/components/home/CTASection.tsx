@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CTASection = () => {
@@ -52,7 +52,7 @@ const CTASection = () => {
             transition={{ duration: 0.5, type: "spring" }}
             className="w-20 h-20 rounded-full bg-gradient-primary flex items-center justify-center mx-auto mb-8"
           >
-            <Sparkles size={36} className="text-primary-foreground" />
+            <Calendar size={36} className="text-primary-foreground" />
           </motion.div>
 
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -61,24 +61,15 @@ const CTASection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-            Stop losing leads to slow response times. Let our AI agents work 24/7 
-            so you can focus on what matters most — growing your business.
+            Stop losing leads to slow response times. Let's schedule a call to discuss 
+            your specific business needs and show you exactly how our AI agents can work for you.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button size="lg" className="btn-glow px-10 py-6 text-lg font-semibold group">
-                Schedule Free Demo
+                Let's Schedule a Call
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-              </Button>
-            </Link>
-            <Link to="/about">
-              <Button
-                size="lg"
-                variant="outline"
-                className="btn-outline-glow px-10 py-6 text-lg font-semibold"
-              >
-                Learn More
               </Button>
             </Link>
           </div>
