@@ -30,7 +30,7 @@ const Header = () => {
             <motion.img
               src={logo}
               alt="The Agentic Force"
-              className="h-12 w-12 object-contain"
+              className="h-12 w-12 object-contain rounded-full"
               whileHover={{ scale: 1.05, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             />

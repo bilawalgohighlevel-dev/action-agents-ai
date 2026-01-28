@@ -3,21 +3,21 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Dr. Sarah Mitchell",
-    role: "Dental Clinic Owner",
-    content: "We were losing 40% of calls after hours. With The Agentic Force, we now capture every inquiry and our booking rate increased by 65%.",
+    name: "Michael Thompson",
+    role: "Dental Practice Owner",
+    content: "Before The Agentic Force, I was losing almost half my after-hours calls to voicemail. Now every single inquiry gets handled instantly. My booking rate jumped 65% in the first month alone—I wish I'd found this sooner.",
     rating: 5,
   },
   {
-    name: "James Rodriguez",
-    role: "HVAC Business Owner",
-    content: "The instant response system saved us countless emergency calls. Customers are amazed by how fast we respond, even at 2 AM.",
+    name: "Rachel Martinez",
+    role: "HVAC Company Founder",
+    content: "Emergency calls at 2 AM used to mean lost sleep or lost customers. Now my AI agent handles everything—scheduling, qualifying, even calming down panicked homeowners. It's like having my best receptionist on call 24/7.",
     rating: 5,
   },
   {
-    name: "Amanda Chen",
-    role: "Real Estate Agent",
-    content: "In real estate, speed is everything. The AI agents respond to leads faster than I ever could, and the quality of qualification is incredible.",
+    name: "David Chen",
+    role: "Real Estate Broker",
+    content: "In real estate, the first agent to respond usually wins the listing. The Agentic Force responds to leads in seconds, not hours. My conversion rate has never been higher, and I finally have my weekends back.",
     rating: 5,
   },
 ];
@@ -50,13 +50,13 @@ const TestimonialsSection = () => {
           className="section-heading"
         >
           <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            Testimonials
+            Success Stories
           </span>
           <h2 className="font-heading">
-            Trusted by <span className="gradient-text">Industry Leaders</span>
+            Real Results from <span className="gradient-text">Real Businesses</span>
           </h2>
           <p>
-            See what our clients say about transforming their business with autonomous AI agents.
+            Hear how business owners like you transformed their operations with our AI workforce.
           </p>
         </motion.div>
 

@@ -69,10 +69,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
-            Your{" "}
-            <span className="gradient-text">24/7 Digital</span>
-            <br />
-            Workforce
+            Your Business Powered by{" "}
+            <span className="gradient-text">Your 24/7 Digital Workforce</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -80,10 +78,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            Deploy autonomous AI agents that handle calls, qualify leads, and manage conversations 
-            across all channels — while you focus on closing deals.
+            Stop chasing leads and start closing them. The Agentic Force deploys intelligent AI agents 
+            that reason, speak, and act—handling your sales, support, and scheduling 24/7 with human-standard precision.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -95,7 +93,7 @@ const HeroSection = () => {
           >
             <Link to="/contact">
               <Button size="lg" className="btn-glow px-8 py-6 text-lg font-semibold group">
-                Get Started Free
+                Hire Your AI Employee Now
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </Button>
             </Link>
