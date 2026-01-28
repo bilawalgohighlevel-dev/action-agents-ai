@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";
-import ServicesSection from "@/components/home/ServicesSection";
+import InteractiveServicesSection from "@/components/home/InteractiveServicesSection";
 import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
 import TargetClientsSection from "@/components/home/TargetClientsSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <Layout>
       <HeroSection />
-      <ServicesSection />
+      <InteractiveServicesSection />
       <WhyChooseUsSection />
       <TargetClientsSection />
       <TestimonialsSection />
