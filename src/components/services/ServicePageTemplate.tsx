@@ -3,7 +3,18 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight, Play } from "lucide-react";
+import { Check, ArrowRight, Play, ChevronDown } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
 interface ServicePageTemplateProps {
   badge: string;
@@ -14,6 +25,7 @@ interface ServicePageTemplateProps {
   features: string[];
   benefits: { title: string; description: string }[];
   demoDescription: string;
+  faqs: FAQItem[];
   basicPlan: {
     price: string;
     period: string;
@@ -35,6 +47,7 @@ const ServicePageTemplate = ({
   features,
   benefits,
   demoDescription,
+  faqs,
   basicPlan,
   advancedPlan,
 }: ServicePageTemplateProps) => {
@@ -306,8 +319,52 @@ const ServicePageTemplate = ({
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-24">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-heading"
+          >
+            <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              FAQ
+            </span>
+            <h2 className="font-heading">
+              Frequently Asked <span className="gradient-text">Questions</span>
+            </h2>
+            <p>Everything you need to know about this service</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="border border-border rounded-xl px-6 bg-card/50 data-[state=open]:border-primary/50 transition-colors"
+                >
+                  <AccordionTrigger className="text-left font-medium hover:no-underline py-5">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 bg-card">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

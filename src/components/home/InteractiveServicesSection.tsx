@@ -8,7 +8,8 @@ import {
   Zap, 
   Star, 
   ArrowRight,
-  Check
+  Check,
+  Play
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -240,42 +241,44 @@ const InteractiveServicesSection = () => {
                 </ul>
               </div>
 
-              {/* Right: Pricing & CTA */}
+              {/* Right: Video Placeholder & CTA */}
               <div className="flex flex-col gap-6">
-                {/* Pricing Cards */}
+                {/* Video Placeholder */}
+                <div className="aspect-video rounded-2xl bg-secondary/50 border border-border flex items-center justify-center relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
+                  <motion.div
+                    initial={{ scale: 0.9 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="relative z-10 flex flex-col items-center gap-4"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-20 h-20 rounded-full bg-primary flex items-center justify-center cursor-pointer shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-shadow"
+                    >
+                      <Play size={32} className="text-primary-foreground ml-1" />
+                    </motion.div>
+                    <p className="text-muted-foreground text-sm">Watch Demo Video</p>
+                  </motion.div>
+                </div>
+
+                {/* Pricing Quick Info */}
                 <div className="grid grid-cols-2 gap-4">
-                  {/* Basic Plan */}
-                  <div className="rounded-2xl border border-border bg-card/50 p-6 text-center">
-                    <p className="text-sm text-muted-foreground mb-2">Basic Plan</p>
-                    <p className="text-3xl font-bold text-foreground mb-1">
+                  <div className="rounded-xl border border-border bg-card/50 p-4 text-center">
+                    <p className="text-xs text-muted-foreground mb-1">Starting From</p>
+                    <p className="text-2xl font-bold text-foreground">
                       {currentService.pricing.basic}
                     </p>
                     <p className="text-xs text-muted-foreground">/month</p>
                   </div>
-
-                  {/* Advanced Plan */}
-                  <div className="rounded-2xl border-2 border-primary bg-primary/10 p-6 text-center relative overflow-hidden">
-                    <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] px-2 py-0.5 rounded-bl-lg font-medium">
-                      Popular
-                    </div>
-                    <p className="text-sm text-primary mb-2">Advanced Plan</p>
-                    <p className="text-3xl font-bold text-foreground mb-1">
+                  <div className="rounded-xl border-2 border-primary bg-primary/10 p-4 text-center">
+                    <p className="text-xs text-primary mb-1">Advanced</p>
+                    <p className="text-2xl font-bold text-foreground">
                       {currentService.pricing.advanced}
                     </p>
                     <p className="text-xs text-muted-foreground">/month</p>
                   </div>
-                </div>
-
-                {/* Icon Display */}
-                <div className="flex justify-center py-6">
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="w-32 h-32 rounded-3xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/30"
-                  >
-                    <ServiceIcon size={64} className="text-primary-foreground" />
-                  </motion.div>
                 </div>
 
                 {/* CTA Buttons */}
@@ -294,8 +297,9 @@ const InteractiveServicesSection = () => {
                     variant="outline"
                     className="btn-outline-glow flex-1 h-12 text-base"
                   >
-                    <Link to="/contact">
-                      Book a Demo
+                    <Link to={currentService.path + "#demo"}>
+                      <Play size={16} className="mr-2" />
+                      Watch Demo
                     </Link>
                   </Button>
                 </div>
