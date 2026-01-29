@@ -35,6 +35,32 @@ const VoiceAgentPage = () => {
           description: "Convert more callers into booked appointments with instant availability checking and seamless scheduling.",
         },
       ]}
+      faqs={[
+        {
+          question: "How does the AI Voice Agent sound? Will callers know it's not human?",
+          answer: "Our Voice Agent uses cutting-edge natural language processing and voice synthesis to deliver human-like conversations. The AI speaks naturally with appropriate pauses, tone variations, and can even handle interruptions gracefully. Most callers can't distinguish it from a real receptionist.",
+        },
+        {
+          question: "Can the Voice Agent handle complex questions or objections?",
+          answer: "Yes! The AI is trained on your specific business information and can answer detailed questions about your services, pricing, and availability. For questions beyond its scope, it seamlessly transfers the call to your team or schedules a callback.",
+        },
+        {
+          question: "How long does setup take?",
+          answer: "Most businesses are up and running within 48-72 hours. We handle the technical setup, customize the voice and scripts to match your brand, and integrate with your existing CRM (especially GoHighLevel). Training and optimization continue in the first weeks.",
+        },
+        {
+          question: "What happens if the AI can't help a caller?",
+          answer: "The Voice Agent is configured with intelligent escalation rules. If a caller requests to speak with a human, has a complex issue, or the AI detects frustration, it can instantly transfer the call to your team or schedule a callback at their preferred time.",
+        },
+        {
+          question: "Can I customize what the Voice Agent says?",
+          answer: "Absolutely. We work with you to create custom scripts, define the agent's personality, and set specific responses for your most common inquiries. You can update scripts anytime, and the AI learns from successful calls to improve over time.",
+        },
+        {
+          question: "How does billing work? Are there any per-minute charges?",
+          answer: "Our Basic plan includes up to 500 minutes/month, while the Advanced plan offers unlimited minutes. There are no hidden per-minute charges. You simply pay the monthly fee and the AI handles all your calls.",
+        },
+      ]}
       demoDescription="Watch our Voice Agent handle a real customer inquiry, qualify the lead, and book an appointment — all without human intervention."
       basicPlan={{
         price: "$497",

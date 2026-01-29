@@ -35,6 +35,32 @@ const InstantResponsePage = () => {
           description: "Once configured, the system works automatically — no manual intervention required.",
         },
       ]}
+      faqs={[
+        {
+          question: "How fast is the SMS response after a missed call?",
+          answer: "The SMS is typically sent within 3-5 seconds of a missed call being detected. This near-instant response dramatically increases engagement rates since the caller still has their phone in hand and your business on their mind.",
+        },
+        {
+          question: "What does the automated SMS conversation look like?",
+          answer: "The initial SMS is personalized and acknowledges the missed call. From there, the AI engages in natural conversation to understand their needs, answer questions, and guide them to book an appointment or provide their information. It feels like texting with a helpful human.",
+        },
+        {
+          question: "Does this work outside of business hours?",
+          answer: "Yes! With the Advanced plan, the system operates 24/7. For Basic plan users, you can configure specific hours. Even if you limit active hours, missed calls during off-hours can trigger a friendly message letting them know when you'll be available.",
+        },
+        {
+          question: "Can I customize the response messages?",
+          answer: "Absolutely. You have full control over the initial message, follow-up sequences, and how the AI handles different scenarios. We provide templates to get started, but everything can be tailored to match your brand voice and business needs.",
+        },
+        {
+          question: "What if someone prefers a call back instead of texting?",
+          answer: "The AI can offer callback scheduling. When a lead prefers a call, they can choose a convenient time slot, which is automatically added to your calendar. You'll receive a notification with all the context from the SMS conversation.",
+        },
+        {
+          question: "How does this integrate with my existing phone system?",
+          answer: "We integrate with most VoIP systems and traditional carriers through call forwarding rules. Setup typically takes less than an hour. We also integrate directly with GoHighLevel and other CRMs to sync all lead data automatically.",
+        },
+      ]}
       demoDescription="Watch what happens when a call is missed — see the instant SMS engagement and how quickly leads are captured and qualified."
       basicPlan={{
         price: "$197",
